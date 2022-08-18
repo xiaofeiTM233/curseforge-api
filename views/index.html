@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple CurseForge API</title>
-    <meta name="description" content="Simple API wrapper for the CurseForge page">
+    <title>简单的 CurseForge API</title>
+    <meta name="description" content="这是curseforge.com的一个简单API">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
@@ -49,51 +49,49 @@
 </head>
 <body>
 <div class="wrapper">
-    <h1>Simple CurseForge API</h1>
-    This is a simple API for <a href="https://curseforge.com" target="_blank">curseforge.com</a>.<br/>
-    It mostly uses the same URL scheme as the CurseForge website. You can imagine this API like JSON glasses for
-    CurseForge.<br/>
-    The API tries to directly fetch the data on request, but all requests are cached for 1 hour. A client-side cache is
-    also recommended.<br/>
+    <h1>简单的 CurseForge API</h1>
+    这是<a href="https://curseforge.com" target="_blank">curseforge.com</a>的一个简单API。<br/>
+    它主要使用与 CurseForge 网站相同的URL方案。你可以把这个API想象成 CurseForge 的 JSON 浏览。<br/>
+    API 会尝试根据请求直接获取数据，但所有请求都会缓存 1 小时。建议使用客户端缓存。<br/>
     <br/>
     <br/>
     <br/>
-    <h2>Currently supported methods</h2>
+    <h2>当前支持的方法</h2>
 
-    <h3>List projects</h3>
-    <h4 class="url-scheme">/{game}/{type}[?category={category}][&filter-game-version={game_version}][&filter-sort={field}][&page={page}]</h4>
+    <h3>列出项目</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}[?category={分类}][&filter-game-version={游戏版本}][&filter-sort={领域}][&page={页码}]</h4>
     <a class="example" href="/minecraft/mc-mods" target="_blank">/minecraft/mc-mods</a><br/>
 
-    <h3>Search projects</h3>
-    <h4 class="url-scheme">/{game}/{type}/search?search={search}</h4>
+    <h3>搜索项目</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}/search?search={搜索项}</h4>
     <a class="example" href="/minecraft/mc-mods/search?search=worldedit" target="_blank">/minecraft/mc-mods/search?search=worldedit</a><br/>
 
-    <h3>Project information</h3>
-    <h4 class="url-scheme">/{game}/{type}/{slug}</h4>
+    <h3>项目信息</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}/{slug}</h4>
     <a class="example" href="/minecraft/mc-mods/worldedit" target="_blank">/minecraft/mc-mods/worldedit</a><br/>
 
-    <h3>Project relations</h3>
-    <h4 class="url-scheme">/{game}/{type}/{slug}/relations/{relation}[?filter={field}][&page={page}]</h4>
+    <h3>项目关系</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}/{slug}/relations/{关系}[?filter={领域}][&page={页码}]</h4>
     <a class="example" href="/minecraft/mc-mods/journeymap/relations/dependencies" target="_blank">/minecraft/mc-mods/journeymap/relations/dependencies</a><br/>
 
-    <h3>List project files</h3>
-    <h4 class="url-scheme">/{game}/{type}/{slug}/files[?sort={field}][&page={page}][&filter-game-version={version-id}][&filter-game-version-name={version-name}]</h4>
+    <h3>项目文件列表</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}/{slug}/files[?sort={领域}][&page={页码}][&filter-game-version={版本ID}][&filter-game-version-name={版本名称}]</h4>
     <a class="example" href="/minecraft/mc-mods/worldedit/files" target="_blank">/minecraft/mc-mods/worldedit/files</a><br/>
 
-    <h3>File information</h3>
-    <h4 class="url-scheme">/{game}/{type}/{slug}/files/{file_id}</h4>
+    <h3>文件信息</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}/{slug}/files/{文件ID}</h4>
     <a class="example" href="/minecraft/mc-mods/worldedit/files/2725648" target="_blank">/minecraft/mc-mods/worldedit/files/2725648</a><br/>
 
-    <h3>Download information</h3>
-    <h4 class="url-scheme">/{game}/{type}/{slug}/download/{file_id}</h4>
+    <h3>下载信息</h3>
+    <h4 class="url-scheme">/{游戏}/{项目}/{slug}/download/{文件ID}</h4>
     <a class="example" href="/minecraft/mc-mods/worldedit/download/2725648" target="_blank">/minecraft/mc-mods/worldedit/download/2725648</a><br/>
 
-    <h3>List categories</h3>
-    <h4 class="url-scheme">/other/{game}/{type}/categories</h4>
+    <h3>分类列表</h3>
+    <h4 class="url-scheme">/other/{游戏}/{项目}/categories</h4>
     <a class="example" href="/other/minecraft/mc-mods/categories" target="_blank">/other/minecraft/mc-mods/categories</a><br/>
 
-    <h3>List game versions</h3>
-    <h4 class="url-scheme">/other/{game}/{type}/versions</h4>
+    <h3>列出游戏版本</h3>
+    <h4 class="url-scheme">/other/{游戏}/{项目}/versions</h4>
     <a class="example" href="/other/minecraft/mc-mods/versions" target="_blank">/other/minecraft/mc-mods/versions</a><br/>
 
     <br/>
